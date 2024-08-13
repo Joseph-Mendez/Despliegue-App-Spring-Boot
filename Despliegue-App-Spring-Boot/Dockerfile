@@ -18,8 +18,6 @@ WORKDIR /app
 
 # Copia el archivo JAR de tu aplicación al directorio de trabajo
 COPY --from=build /app/build/libs/nombremicroservicio-0.0.1-SNAPSHOT.jar .
-# Si usas Maven, el nombre del JAR puede ser diferente. Verifica el nombre exacto generado.
-# COPY --from=build /app/target/nombremicroservicio-0.0.1-SNAPSHOT.jar .
 
 # Exponer el puerto que utilizará la aplicación
 EXPOSE 8080
